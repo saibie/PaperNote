@@ -18,5 +18,14 @@ $$
 \end{array}
 $$
 
+$$
+\begin{array}{rl}
+(-F'[X_{i}]-sI)(H_{i}) &= F(X_{i}) - sH_{i}\\
+
+\end{array}
+$$
+
+## 아이고 의미없다
+
 
 
