@@ -1,52 +1,24 @@
 $$
-X_{i+1} = X_{i} - F'[X_{i}]^{-1}\left(F(X_{i})\right)\\~\\
-\left\{\begin{array}{rl}
--F'[X_{i}](H_{i})&= F(X_{i}) \\
-X_{i+1} &= X_{i} + H_{i}
-\end{array}\right.
+\exists c_3 > 0; \forall y \in X_{1}, \forall x \in B_{\rho}(x^*), \|F'[x]y\| \geq c_3\|y\| \\
+\exists c_4 > 0; \forall m \in N_{1}, \forall x \in B_{\rho}(x^*), \|F'[x]m\| \geq c_4\|x - x^*\|\|m\|
 $$
 
-$$
-\textrm{Suppose that }s = \min\left\{\left|-\rho(F'[S])\right|\right\}
-$$
 
 $$
-\begin{array}{rl}
--\mathcal{F'}[X_{i}]h_{i} - s\mathcal{I}h_{i} &= {\rm vec~}F(X_{i}) - sh_{i}\\
-(-\mathcal{F'}[X_{i}] - s\mathcal{I})h_{i} &= {\rm vec~}F(X_{i}) - sh_{i}\\
-
+\begin{array}{rcl}
+F(y) &=& F'[x^*](y - x^*) + \dfrac12 F''[x^*](y-x^*)^2 + \cdots\\
+F(x) &=& F'[x^*](x - x^*) + \dfrac12 F''[x^*](x-x^*)^2 + \cdots\\
+F(y) &=& F(x) + F'[x](y - x) + \dfrac12 F''[x](y-x)^2 + \cdots\\
+0 &=& F(y) + F'[y](x^* - y) + \dfrac12 F''[y](x^* - y)^2 + \cdots\\
+0 &=& F(x) + F'[x](x^* - x) + \dfrac12 F''[x](x^*-x)^2 + \cdots\\
+F(x) &=& F(y) + F'[y](x - y) + \dfrac12 F''[y](x - y)^2 + \cdots
 \end{array}
 $$
 
 $$
 \begin{array}{rl}
-(-F'[X_{i}]-sI)(H_{i}) &= F(X_{i}) - sH_{i}\\
-
+F(m) &= F(x) + F'[x](m-x) + \dfrac12 F''[x](m - x)^2 + \cdots \\
+F(m) &= F'[x^*](m-x^*) + \dfrac12 F''[x^*](m - x^*)^2 + \cdots \\
+F(m) &= F'[x^*](m-x^*) + \dfrac12 F''[x^*](m - x^*)^2 + \cdots \\
 \end{array}
 $$
-
-### 아이고 의미없다
-
-
-
-$$
-\begin{array}{rl}
-X_{0} &= 0 \\
-X_{1} &= -F'[0]^{-1}(F(0)) \\
-F'[0](X_{1}) &= -A_{0} \\
-A_{1}X_{1} &= -A_{0} \\
-X_{1} &= -A_{1}^{-1}A_{0} \\
-\end{array}
-$$
-
-$$
-\begin{array}{rl}
-X_{2} &= X_{1} - F'[X_{1}]^{-1}(F(X_{1})) \\
-F'[X_{1}](H_{1}) &= -F(X_{1}) = -\sum_{k=0}^{n} A_{k}X_{1}^{k} \\
-\sum_{k=1}^{n}\sum_{l=0}^{k-1} A_{k}X_{1}^{l}H_{1}X_{1}^{k-1-l} &= -\sum_{k=0}^{n} A_{k}X_{1}^{k} \\
-\left[\sum_{k=1}^{n}\sum_{l=0}^{k-1} (X_{1}^{T})^{k-1-l} \otimes A_{k}X_{1}^{l}\right]h_{1} &= -f(X_{1}) \\
-\end{array}
-$$
-
-### 아이고 왜하냐 이걸
-
