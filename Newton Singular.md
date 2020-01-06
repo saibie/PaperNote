@@ -1,24 +1,36 @@
-$$
-\exists c_3 > 0; \forall y \in X_{1}, \forall x \in B_{\rho}(x^*), \|F'[x]y\| \geq c_3\|y\| \\
-\exists c_4 > 0; \forall m \in N_{1}, \forall x \in B_{\rho}(x^*), \|F'[x]m\| \geq c_4\|x - x^*\|\|m\|
-$$
-
 
 $$
-\begin{array}{rcl}
-F(y) &=& F'[x^*](y - x^*) + \dfrac12 F''[x^*](y-x^*)^2 + \cdots\\
-F(x) &=& F'[x^*](x - x^*) + \dfrac12 F''[x^*](x-x^*)^2 + \cdots\\
-F(y) &=& F(x) + F'[x](y - x) + \dfrac12 F''[x](y-x)^2 + \cdots\\
-0 &=& F(y) + F'[y](x^* - y) + \dfrac12 F''[y](x^* - y)^2 + \cdots\\
-0 &=& F(x) + F'[x](x^* - x) + \dfrac12 F''[x](x^*-x)^2 + \cdots\\
-F(x) &=& F(y) + F'[y](x - y) + \dfrac12 F''[y](x - y)^2 + \cdots
+\begin{array}{rl}
+Q(X+tH)^{T}Q(X+tH) &= t^{4}(H^{2T}A^{T}AH^{2}) \\
+	&+ t^{3}(H^{2T}A^{T}AXH + H^{T}X^{T}A^{T}AH^{2} + H^{2T}A^{T}AHX + X^{T}H^{T}A^{T}AH^{2} \\
+	&+ H^{2T}A^{T}BH + H^{T}B^{T}AH^{2}) \\
+	&\\
+	&+ t^{2}(X^{2T}A^{T}AH^{2} + H^{2T}A^{T}AX^{2} + X^{T}B^{T}AH^{2} + H^{2T}A^{T}BX \\
+    &+ C^{T}AH^{2} + H^{2T}A^{T}C + (AHX+AHX+BH)^{T}(AHX+AHX+BH))\\
+    &\\
+	&+ t(X^{2T}A^{T}AXH + X^{2T}A^{T}AHX + X^{2T}A^{T}BH \\
+	&+ H^{T}X^{T}A^{T}AX^{2} + X^TH^TA^TAX^{2} + H^TB^TAX^{2}\\
+	&+ X^TB^TAXH + X^TB^TAHX + X^TB^TBH \\
+	&+ H^TX^TA^TBX + X^TH^TA^TBX + H^TB^TBX \\
+	&+ C^TAXH + C^TAHX + C^TBH \\
+	&+ H^TX^TA^TC + X^TH^TA^TC + H^TB^TC)\\
+	&\\
+	&+ (AX^{2}+BX+C)^{T}(AX^{2}+BX+C)
 \end{array}
 $$
 
 $$
 \begin{array}{rl}
-F(m) &= F(x) + F'[x](m-x) + \dfrac12 F''[x](m - x)^2 + \cdots \\
-F(m) &= F'[x^*](m-x^*) + \dfrac12 F''[x^*](m - x^*)^2 + \cdots \\
-F(m) &= F'[x^*](m-x^*) + \dfrac12 F''[x^*](m - x^*)^2 + \cdots \\
+Q(X+tH)^{T}Q(X+tH) &= t^{4}(AH^{2})^T(AH^{2}) \\
+	&+ t^{3}(H^{2T}A^{T}(AXH + AHX + BH) + (H^{T}X^{T}A^{T} + X^{T}H^{T}A^{T} + H^{T}B^{T})AH^{2}) \\
+	&\\
+	&+ t^{2}((X^{2T}A^{T} + X^{T}B^{T}+ C^{T})AH^{2} + H^{2T}A^{T}(AX^{2} + BX + C) \\
+	&+ (AHX+AHX+BH)^{T}(AHX+AHX+BH))\\
+    &\\
+	&+ t((X^{2T}A^{T} + X^TB^T + C^T)(AXH + AHX + BH) \\
+	&+ (H^{T}X^{T}A^{T} + X^TH^TA^T + H^TB^T)(AX^{2} + BX + C))\\
+	&\\
+	&+ (AX^{2}+BX+C)^{T}(AX^{2}+BX+C)
 \end{array}
 $$
+
